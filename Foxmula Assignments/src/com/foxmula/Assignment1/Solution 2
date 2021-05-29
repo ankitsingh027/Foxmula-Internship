@@ -1,0 +1,111 @@
+*Create a class Stack that declares a stack and the methods to perform push ( ), pop ( ) and checkEmpty (
+) operations on the stack. Create two stacks and write a menu-driven program to perform operations on
+the two stacks. Whenever the number of elements in the two stacks becomes equal, a message should
+automatically be generated displaying the number of elements in each stack.*
+
+public close stack
+{
+   private int[]s;
+   private int top,max;
+   stack(int i)
+  {
+     max=i;
+	 S=new int[max];
+	 top=-1;
+	}
+	  void push (int data)
+	  {
+	   system.out.print("stack is overflow");
+	 }
+	    else
+	{
+	   S[top++]=data;
+	  }
+	  }
+	    int pop()
+	   {
+	     system.out.print("stack is underflow");
+		 return 0;
+		 }
+		  else
+		  {
+		   return S[top--];
+		  }
+		  }
+		    boolean check empty()
+			{
+			  if(max==-1)
+			 {
+			  else
+			  {
+			   return false;
+			   }
+			   }
+			     public int count()
+				{
+				   if(top>-1)
+				   return top+1;
+				   else
+				      return 0;
+				   }
+				   }
+				   
+				     import java.util*;
+					 public class stackimp;
+					 {
+					   public void display(stack st1,stack st2)
+					   {
+					     if(st.count()=st2.count())
+						{
+						   system.out.print1n("total no. of element is both is:"+st2.count());
+						  }
+						  }
+						  }
+						  }
+						    public static void main(string[]args)
+							
+							{
+							 scanner Sc=new scanner(system.in);
+							 stack S1=new stack(20);
+							 stack S2=new stack(20);
+							 int ch,data;
+							 StackImp S1=new StackImp();
+							 while(true)
+							 {
+							   system.out.println("\n1.push in stack 1");
+							   system.out.println("2.push in stack2");
+							   system.out.println("3.push in stack 1");
+							   system.out.println("4.push in stack 1");
+							   system.out.println("enter your choice:");
+							        ch.=sc.nextInt();
+									switch(ch)
+								   {
+								    Case 1:
+									    system.out.println("enter the data")
+										data=sc.next Int();
+										S1.push(data);
+										Si.display(s1,s2);
+										break;
+										
+									case 2:
+									
+									System.out.println("enter the data");
+									data=sc.nextInt();
+									S2.push(data);
+									si.display(s1,s2);
+									break;
+									
+									Case 3:
+									 System.out.println(S1.pop());
+									 si.display(s1,s2);
+									 break;
+									 
+									 Case 4:
+									     System.out.println(S2.pop());
+										 Sp.display(s1,s2);
+										 break;
+										 default;
+										 }
+										 }
+										 }
+										 }
