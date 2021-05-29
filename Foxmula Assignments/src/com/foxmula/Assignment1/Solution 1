@@ -5,53 +5,45 @@ using constructor and call the add ( ) method.
 
 
 package com.foxmula.assignment1;
-public class time {
-private int hour, min ,sec ;
-time (int h , int m , int s )
-{
-hour = h;
-min = m;
-sec = s;
-}
-Time()
-{
-hour=0;
-min=0;
-sec=0;
-}
-public time add(time tx)
-{
-time t = new time();
-t.sec = this.sec + tx sec;
-if(t.sec>60)
-{
-t.sec-=60;
-t.min++;
-}
-t.min t=this.min+tx.min;
-if(t.min>60)
-{
-t.min -=60;
-t.hour++;
-}
-t.hour += this.hour + tx.hour
 
-if t.hour -=24
-}
-return t;
-}
-void display(string str)
-{
-system.out.println(str+" "+hour+" "+min+": "+sec);
-}
-public static void main(string[] args)
-{
-time t1 = new time(6,21,17)
-time t2 = new time(5,14,13)
-time t3 = t1.add(t2)
+public class Time {
+	
+	 private int hour, min, sec;
 
-t1.display("time 1: ");
-t2.display("time 2: ");
-t3.display("time after addition : ");
-}
+	    Time(int hour,int min,int sec){
+	        this.hour = hour;
+	        this.min = min;
+	        this.sec = sec;
+	    }
+
+	    Time add(Time time){
+	        Time totalTime = new Time(0,0,0);
+	        totalTime.hour = this.hour + time.hour;
+	        totalTime.min = this.min + time.min;
+	        totalTime.sec = this.sec + time.sec;
+	        if(totalTime.sec >=60){
+	            totalTime.min++;
+	            totalTime.sec %= 60;
+	        }
+	        if(totalTime.min >=60){
+	            totalTime.hour++;
+	            totalTime.min %= 60;
+	        }
+	        if(totalTime.hour >=24){
+	            totalTime.hour %= 24;
+	        }
+
+	        System.out.println("Time = "+totalTime.hour+"h:"+totalTime.min+"m:"+totalTime.sec+"s");
+
+	        return totalTime;
+	    }
+	}
+
+	class Main{
+	    public static void main(String[] args) {
+	        Time time1 = new Time(12,06,14);
+	        Time time2 = new Time(23,15,01);
+	        time1.add(time2);
+	    }
+
 }
