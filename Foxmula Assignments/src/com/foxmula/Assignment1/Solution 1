@@ -1,0 +1,57 @@
+Create a class called Time, which has three private instance variables – hour, min and sec. It contains a
+method called add ( ) which takes one Time object as parameter and print the added value of the calling
+Time object and passes Time object. In the main method, declare two Time objects and assign values
+using constructor and call the add ( ) method.
+
+
+package com.foxmula.assignment1;
+public class time {
+private int hour, min ,sec ;
+time (int h , int m , int s )
+{
+hour = h;
+min = m;
+sec = s;
+}
+Time()
+{
+hour=0;
+min=0;
+sec=0;
+}
+public time add(time tx)
+{
+time t = new time();
+t.sec = this.sec + tx sec;
+if(t.sec>60)
+{
+t.sec-=60;
+t.min++;
+}
+t.min t=this.min+tx.min;
+if(t.min>60)
+{
+t.min -=60;
+t.hour++;
+}
+t.hour += this.hour + tx.hour
+
+if t.hour -=24
+}
+return t;
+}
+void display(string str)
+{
+system.out.println(str+" "+hour+" "+min+": "+sec);
+}
+public static void main(string[] args)
+{
+time t1 = new time(6,21,17)
+time t2 = new time(5,14,13)
+time t3 = t1.add(t2)
+
+t1.display("time 1: ");
+t2.display("time 2: ");
+t3.display("time after addition : ");
+}
+}
