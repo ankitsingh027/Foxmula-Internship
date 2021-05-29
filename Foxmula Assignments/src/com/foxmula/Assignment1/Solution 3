@@ -1,0 +1,85 @@
+package com.foxmula.assignment1;
+
+public class Quadrilateral
+{
+protected int x1,x2,x3,x4,yl,y2,y3,y4;
+protected void setCoordinate(int x1,int y1,int x2,int y2,int x3,int y3,int x4,int y4,)
+{
+this.xl=x1;
+this.yl=y1;
+this.X2=x2;
+this.y2=y2;
+this.x3=x3;
+this.y3=y3;
+this.X4=x4;
+this.y4=y4;
+}
+}
+public class Square extends Quadrilateral
+{
+Square(int x1,int y2,int x2,int y2,int x3,int y3,int x4,int y4)
+{
+setCoordinate(x1,y1,x2,y2,x3,y3,x4,y4);
+}
+int area()
+{
+int d=(int)Math.sqrt((x1-x2)(x1-x2)+(yl-y2)(y1-y2));
+return d*d;
+}
+}
+public class Rectangle extends Quadrilateral
+{
+Rectangle(int x1,int y1,int x2,int y2,int x3,int y3,int x4,int y4)
+{
+setCoordinate(x1,y1,x2,y2,x3,y3,x4,y4);
+}
+int area
+{
+int d1=(int)Math.sqrt(x1-x2)(x1-x2)+(yl-y2)(y1-y2));
+int d2=(int)Math.sqrt((xl-x4)(xl-x4)+(yl-y4)(yl-y4));
+return d1*d2;
+}
+}
+public class Trapezoid extends Quadrilateral
+{
+private int height;
+Trapezoid(int x1,int y1,int x2,int y2,int x3,int y3,int x4,int y4,int height)
+{
+setCoordinate(x1,y1,x2,y2,x3,y3,x4,y4);
+this.height=height;
+}
+int area
+{
+int dl=(int)Math.sqrt((xl-x2)(x1-x2)+(y1-y2)(yl-y2));
+int d2=(int)Math.sqrt((x3-x4)(x3-x4)+(y3-y4)(y3-y4));
+return (int)((dl+d2)*height/2;
+}
+}
+public class Parallelogram extends Quadrilateral
+{
+private int height;
+Parallelogram(int x1,int y1,int x2,int y2,int x3,int y3,int x4,int y4,int height)
+{
+setCoordinate(x1,y1,x2,y2,x3,y3,x4,y4);
+this.height=height;
+}
+int area
+{
+int dl=(int)Math.sqrt((x1-x2)(x1-x2)+(yl-y2)(yl-y2));
+return d1*height;
+}
+}
+public class TestQuadrilateral
+{
+public static void main(String llargs)
+{
+Square sq=new Square(10,20,20,10,30,10,10,20);
+System.out.println("Area Of The Square is " + sq.area());
+Rectangle rec=new Rectangle(30,10,30,20,30,20,10,20);
+System.out.println("Area Of The Rectangle is " + rec.area());
+Parallelogram p=new Parallelogram(20,20,30,10,30,20,0,10,8);
+System.out.println("Area Of The Parallelogram is " + p.area());
+Trapezoid t=new Trapezoid(10,8,30,10,40,50,10,20,14);
+System.out.println("Area Of The Trapezoid is " + t.area());
+}
+}
