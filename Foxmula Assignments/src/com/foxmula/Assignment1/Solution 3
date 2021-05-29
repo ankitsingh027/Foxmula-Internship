@@ -2,8 +2,8 @@ package com.foxmula.assignment1;
 
 public class Quadrilateral
 {
-protected int x1,x2,x3,x4,yl,y2,y3,y4;
-protected void setCoordinate(int x1,int y1,int x2,int y2,int x3,int y3,int x4,int y4,)
+private int x1,x2,x3,x4,yl,y2,y3,y4;
+private void setCoordinate(int x1,int y1,int x2,int y2,int x3,int y3,int x4,int y4,)
 {
 this.xl=x1;
 this.yl=y1;
