@@ -3,109 +3,94 @@
 the two stacks. Whenever the number of elements in the two stacks becomes equal, a message should
 automatically be generated displaying the number of elements in each stack.*
 
-public close stack
-{
-   private int[]s;
-   private int top,max;
-   stack(int i)
-  {
-     max=i;
-	 S=new int[max];
-	 top=-1;
-	}
-	  void push (int data)
-	  {
-	   system.out.print("stack is overflow");
-	 }
-	    else
-	{
-	   S[top++]=data;
-	  }
-	  }
-	    int pop()
-	   {
-	     system.out.print("stack is underflow");
-		 return 0;
-		 }
-		  else
-		  {
-		   return S[top--];
-		  }
-		  }
-		    boolean check empty()
-			{
-			  if(max==-1)
-			 {
-			  else
-			  {
-			   return false;
-			   }
-			   }
-			     public int count()
-				{
-				   if(top>-1)
-				   return top+1;
-				   else
-				      return 0;
-				   }
-				   }
-				   
-				     import java.util*;
-					 public class stackimp;
-					 {
-					   public void display(stack st1,stack st2)
-					   {
-					     if(st.count()=st2.count())
-						{
-						   system.out.print1n("total no. of element is both is:"+st2.count());
-						  }
-						  }
-						  }
-						  }
-						    public static void main(string[]args)
-							
-							{
-							 scanner Sc=new scanner(system.in);
-							 stack S1=new stack(20);
-							 stack S2=new stack(20);
-							 int ch,data;
-							 StackImp S1=new StackImp();
-							 while(true)
-							 {
-							   system.out.println("\n1.push in stack 1");
-							   system.out.println("2.push in stack2");
-							   system.out.println("3.push in stack 1");
-							   system.out.println("4.push in stack 1");
-							   system.out.println("enter your choice:");
-							        ch.=sc.nextInt();
-									switch(ch)
-								   {
-								    Case 1:
-									    system.out.println("enter the data")
-										data=sc.next Int();
-										S1.push(data);
-										Si.display(s1,s2);
-										break;
-										
-									case 2:
-									
-									System.out.println("enter the data");
-									data=sc.nextInt();
-									S2.push(data);
-									si.display(s1,s2);
-									break;
-									
-									Case 3:
-									 System.out.println(S1.pop());
-									 si.display(s1,s2);
-									 break;
-									 
-									 Case 4:
-									     System.out.println(S2.pop());
-										 Sp.display(s1,s2);
-										 break;
-										 default;
-										 }
-										 }
-										 }
-										 }
+import static java.lang.System.exit;
+
+class StackUsingLinkedlist {
+ 
+    private class Node {
+ 
+        int data;
+        Node link;
+    }
+    Node top;
+    StackUsingLinkedlist()
+    {
+        this.top = null;
+    }
+    
+    public void push(int x)
+    {
+      
+        Node temp = new Node();
+ 
+        if (temp == null) {
+            System.out.print("\nStack Overflow");
+            return;
+        }
+        temp.data = x;
+        temp.link = top;
+        top = temp;
+    }
+ 
+    public boolean isEmpty()
+    {
+        return top == null;
+    }
+ 
+    public int peek()
+    {
+        if (!isEmpty()) {
+            return top.data;
+        }
+        else {
+            System.out.println("Stack is empty");
+            return -1;
+        }
+    }
+ 
+    public void pop()
+    {
+        if (top == null) {
+            System.out.print("\nStack Underflow");
+            return;
+        }
+        top = (top).link;
+    }
+ 
+    public void display()
+    {
+        if (top == null) {
+            System.out.printf("\nStack Underflow");
+            exit(1);
+        }
+        else {
+            Node temp = top;
+            while (temp != null) {
+
+                System.out.printf("%d->", temp.data);
+                temp = temp.link;
+            }
+        }
+    }
+}
+public class Main {
+    public static void main(String[] args)
+    {
+
+        StackUsingLinkedlist obj = new StackUsingLinkedlist();
+        obj.push(11);
+        obj.push(22);
+        obj.push(33);
+        obj.push(44);
+        obj.display();
+ 
+        System.out.printf("\nTop element is %d\n", obj.peek());
+ 
+        obj.pop();
+        obj.pop();
+ 
+        obj.display();
+
+        System.out.printf("\nTop element is %d\n", obj.peek());
+    }
+}
