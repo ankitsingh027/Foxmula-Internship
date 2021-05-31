@@ -1,0 +1,38 @@
+package com.foxmula.assignment2;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Code3 {
+	public static void main(String[] args) {
+        ArrayList<Integer> myList = new ArrayList<>();
+        myList.add(55);
+        myList.add(45);
+        myList.add(55);
+        myList.add(100);
+        myList.add(253);
+        myList.add(354);
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter 'k' value: ");
+        int k = sc.nextInt();
+
+        boolean flag = false;
+        int low = 0, high = myList.size()-1;
+        while(low < high) {
+            if(myList.get(low) + myList.get(high) == k) {
+                System.out.println("Pair: (" +myList.get(low)+ "," +myList.get(high)+ ")");
+                flag = true;
+            }
+            if(myList.get(low) + myList.get(high) > k) {
+                high--;
+            }
+            else {
+                low++;
+            }
+        }
+        if(!flag) {
+            System.out.println("No pair possible..");
+        }
+    }
+}
