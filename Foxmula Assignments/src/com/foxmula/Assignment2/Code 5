@@ -1,3 +1,4 @@
+package com.foxmula.assignment2;
 import java.util.Scanner;
 public class Count_Occurrence
 {
