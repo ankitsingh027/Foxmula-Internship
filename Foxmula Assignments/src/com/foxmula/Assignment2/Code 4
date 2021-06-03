@@ -1,0 +1,29 @@
+package javaTreeSet;
+
+import java.util.Iterator;
+import java.util.TreeSet;
+
+public class TreeSetExample {
+
+	public static void main(String[] args) {
+		//Create treeset
+		TreeSet<String> treeSet = new TreeSet<String>();
+		//Add elements to treeset
+		treeSet.add("Omjit");
+		treeSet.add("Krishna");
+		treeSet.add("Mithilesh");
+		treeSet.add("Manish");
+		treeSet.add("Puja");
+		treeSet.add("Shweta");
+		treeSet.add("Rita");
+		
+		//Traverse the elements of treeset
+		Iterator<String> setIterator = treeSet.iterator();
+		while(setIterator.hasNext()){
+			String element = setIterator.next();
+			System.out.println(element);
+		}
+
+	}
+
+}
