@@ -1,4 +1,4 @@
-package javaTreeSet;
+package com.foxmula.assignment2;
 
 import java.util.Iterator;
 import java.util.TreeSet;
