@@ -3,7 +3,7 @@ package com.foxmula.assignment3;
 // Java program to count frequencies of array items
 import java.util.*;
  
-class GFG
+class SortArray
 {
  
     static void countFreq(int arr[], int n)
